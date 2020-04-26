@@ -32,20 +32,74 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 
         // この処理の対象をイベントタイプがメッセージで、かつ、テキストタイプだった場合に限定。
         if (event.type == "message" && event.message.type == "text"){
-            // ユーザーからのテキストメッセージが「こんにちは」だった場合のみ反応。
-            if (event.message.text == "こんにちは"){                
-                // replyMessage()で返信し、そのプロミスをevents_processedに追加。
-                events_processed.push(bot.replyMessage(event.replyToken, {
-                    type: "text",
-                    text: "これはこれは"
-                }));
-            }else{
-                // replyMessage()で返信し、そのプロミスをevents_processedに追加。
-                events_processed.push(bot.replyMessage(event.replyToken, {
-                    type: "text",
-                    text: "cogito, ergo sum.\n我思う、故に我あり。"
-                }));
+
+            var min = 1;
+            var max = 10;
+            var randomNum = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+
+            switch(randomNum){
+                case 1:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "cogito, ergo sum.\n我思う、故に我あり。"
+                    }));
+                    break;
+                case 2:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "memento mori.\n死を忘れるな。"
+                    }));
+                    break;
+                case 3:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "errare humanum est.\n間違う事（迷うこと）は人間的だ。"
+                    }));
+                    break;
+                case 4:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "carpe diem.\n今を楽しめ。"
+                    }));
+                    break;
+                case 5:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "vivere est militare.\n生きる事は戦う事だ。"
+                    }));
+                    break;
+                case 6:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "parvo gaudere memento.\n小さい事に喜ぶ事を忘れるな。"
+                    }));
+                    break;
+                case 7:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "fac, quod rectum est, dic, quod verum est.\n正しい事を為せ、真の事を言え。"
+                    }));
+                    break;
+                case 8:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "festina lente.\nゆっくりと急げ。"
+                    }));
+                    break;
+                case 9:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "usus est magister optimus.\n実践は最良の教師。"
+                    }));
+                    break;
+                case 10:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "sequere naturam.\n自然に従え。"
+                    }));
+                    break;          
             }
+        
         }
     });
 
