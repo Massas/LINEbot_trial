@@ -34,7 +34,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
         if (event.type == "message" && event.message.type == "text"){
 
             var min = 1;
-            var max = 10;
+            var max = 30;
             var randomNum = Math.floor( Math.random() * (max + 1 - min) ) + min ;
 
             switch(randomNum){
@@ -97,9 +97,108 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
                         type: "text",
                         text: "sequere naturam.\n自然に従え。"
                     }));
-                    break;          
-            }
-        
+                    break;
+                case 11:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "homines dum docent discunt.\n人は教えてる間に学ぶものだ。"
+                    }));
+                case 12:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "sit difficile; experiar tamen.\nそれが困難であるとしよう、それでも私は試みよう。"
+                    }));
+                case 13:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "superanda omnis fortuna ferendo est.\nすべての運命は耐えることで克服されなければいけない。"
+                    }));
+                case 14:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "qui bene serit, bene metet.\nよく種を撒く者はよく刈り取る。"
+                    }));
+                case 15:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "sapientia virtus est, id summum bonum est.\n叡知は徳である。それは最高の善である。"
+                    }));
+                case 16:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Salve, mel meum.\nやあ、私の蜂蜜よ。\n  -文人エラスムスが恋人に贈った挨拶"
+                    }));
+                case 17:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Philosophia sapientiae amor est et adfectatio.\n哲学とは知への愛、知の追求である。"
+                    }));
+                case 18:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Domina omnium et regina ratio est.\n万物を支配する女王とは、理性のことである。"
+                    }));
+                case 19:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Vincit qui se vincit.\n己に勝つものが、勝利者である。"
+                    }));
+                case 20:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Fortuna adversa virum magnae sapientiae non terret.\n逆境も知恵の長けたものには歯が立たぬ。"
+                    }));
+                case 21:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Ex vitio alterius sapiens emendat suum.\n他者の欠点から、賢者は自らの欠点を正す。"
+                    }));
+                case 22:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Varientas delectat.\nいろいろあるから面白い。"
+                    }));
+                case 23:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Semper bonus homo tiro est.\n善人は常に初心者である。"
+                    }));
+                case 24:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Nec habeo, nec careo, nec curo.\n持たず、求めず、気を揉まず。"
+                    }));
+                case 25:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Imago animi sermo est.\n言葉は心の姿を表す。"
+                    }));
+                case 26:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Dum fata sinunt vivite laeti.\n楽しくいきなさい、運命が許す間は。"
+                    }));
+                case 27:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Facta non verda.\n不言実行。"
+                    }));
+                case 28:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Per aspera ad astra.\n困難を通じて天に昇る。"
+                    }));
+                case 29:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Vixi et quem dederat cursum fortuna peregi.\n私は生きた。そして運命が与えた道を最後まで歩き通した。"
+                    }));
+                case 30:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Dum spiro, spero.\n生きる限り、希望を持つことができる。"
+                    }));
+                }        
         }
     });
 
