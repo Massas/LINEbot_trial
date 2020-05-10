@@ -34,7 +34,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
         if (event.type == "message" && event.message.type == "text"){
 
             var min = 1;
-            var max = 30;
+            var max = 40;
             var randomNum = Math.floor( Math.random() * (max + 1 - min) ) + min ;
 
             switch(randomNum){
@@ -176,7 +176,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
                 case 26:
                     events_processed.push(bot.replyMessage(event.replyToken, {
                         type: "text",
-                        text: "Dum fata sinunt vivite laeti.\n楽しくいきなさい、運命が許す間は。"
+                        text: "Dum fata sinunt vivite laeti.\n楽しく生きなさい、運命が許す間は。"
                     }));
                 case 27:
                     events_processed.push(bot.replyMessage(event.replyToken, {
@@ -197,6 +197,56 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
                     events_processed.push(bot.replyMessage(event.replyToken, {
                         type: "text",
                         text: "Dum spiro, spero.\n生きる限り、希望を持つことができる。"
+                    }));
+                case 31:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Jucunda memoria est praetetitorum malorum.\n過ぎ去った不幸の記憶は快い。"
+                    }));
+                case 32:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Si vales, bene est; ego valeo.\nあなたが元気なら、それはよいこと。私は元気です。(ラテン語の「拝啓」)"
+                    }));
+                case 33:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Nemo enim potest omnia scire.\n誰も全てを知ることは出来ないのだから。"
+                    }));
+                case 34:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Non omnia possumus omnes.\n我々は皆、全てのことが出来るわけではない"
+                    }));
+                case 35:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Res est solliciti plena timoris amor.\n恋は不安な恐れに満ちたものでございます。"
+                    }));
+                case 36:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Ad uno disce omnes.\n一つからすべてを学べ。"
+                    }));
+                case 37:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Deliberando saepe perit occasio.\n好機は熟考することによってしばしば消滅する。"
+                    }));
+                case 38:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Aurea mediocritas.\n黄金の中庸。"
+                    }));
+                case 39:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Nullis amor est sanabilis herbis.\n恋はいかなる薬草によっても救済できない。"
+                    }));
+                case 40:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Sol lucet omnibus.\n太陽は万物のために輝く。"
                     }));
                 }        
         }
