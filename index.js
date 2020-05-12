@@ -248,6 +248,31 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
                         type: "text",
                         text: "Sol lucet omnibus.\n太陽は万物のために輝く。"
                     }));
+                case 41:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Eunt anni more fluentis aquae.\n年月は流れる水のように進む。"
+                    }));
+                case 42:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Disce quasi semper victurus,vive quasi cras moriturus.\n永遠に生きるように学べ、明日死ぬかのように生きよ。"
+                    }));
+                case 43:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Tempus est quaedam pars aeternitatis.\n時間は永遠のある一部である。"
+                    }));
+                case 44:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Omnia vincit Amor.\n愛はすべてに打ち勝つ。"
+                    }));
+                case 45:
+                    events_processed.push(bot.replyMessage(event.replyToken, {
+                        type: "text",
+                        text: "Gutta cavat lapidem non vi sed saepe cadendo.\n滴は岩に、力によってではなく、何度も落ちることによって穴を開ける。"
+                    }));
                 }        
         }
     });
